@@ -1,0 +1,133 @@
+/*selettore universale*/
+* {
+    padding: 0em;
+    margin: 0em;
+}
+
+/* :root sono variabili*/
+:root{
+    --bgcolor: #0365AE;
+    --breadcolor: #163F77;
+    --txtcolor: #FFF;
+    --newscolor: #F3C42B;
+    --newstxtcolor: #000;
+    --contentcolor: #000;
+    --contentbgcolor: #FFF;
+    --linkcolor: #FFF;
+    --visitedcolor: #F3C42B;
+}
+
+html, body{
+    font-size: 100%; /* lascio scelta dell'utente*/
+    font-family: "verdana", sans-serif; /*unico errore che possiamo fare è su serif-sans serif*/
+    line-height: 1.5em;
+    margin: auto;
+    background-color: var(--bgcolor);
+    color: var(--contentbgcolor);
+    
+}
+
+html{
+    background-image: url("images/bg.png"); /*immagine di backgound deve essere sotto 1MB!!! errore*/
+    background-size: contain; /*zoom in modo da coprire tutto*/
+}
+
+body{
+    max-width: 1024px;
+    border: 1px solid #000;
+}
+
+/*
+=============================
+HEADER
+=============================
+*/
+
+header{
+    text-align: center;
+    padding: 1.0;
+    padding-top: 0.7em;
+}
+
+header h2{
+    font-size: 1.8em;
+    padding: 0.5em;
+    margin-top: 0.3em;
+}
+
+
+/*
+========================================================================================================
+BREADCRUMB
+=======================================================================================================
+*/
+
+#breadcrumb{
+    background-color: var(--breadcolor);
+    font-size: 1.1em;
+    padding: 0.5em 0em 0.5em 1.0em; /*padding e non margin altrimenti prenderebbe colore di bg*/
+    border: 1px solid #000;
+}
+
+#breadcrumb a:link{
+    color: var(--linkcolor);
+}
+
+#breadcrumb a:visited{
+    color: var(--visitedcolor);
+}
+
+
+/*
+============================
+MENU
+==============================
+*/
+#menu{
+    float: left;
+    width: 25%;
+    font-size: 1.3em;
+    padding: 0.8em;
+}
+
+#menu a:link{
+    color: var(--linkcolor);
+}
+
+#menu a:visited{
+    color: var(--visitedcolor);
+}
+
+ul{
+    list-style: none;
+}
+
+/*
+================================
+ULTIME NEWS
+==============================
+*/
+
+
+aside{
+    float: right;
+    width: 20%;
+}
+
+aside h2{
+    background-color: var(--newscolor);
+    color: var(--newstxtcolor);
+}
+
+
+/*
+============================================
+CONTENUTO
+===========================================
+*/
+
+main{
+    background-color: var(--contentbgcolor);
+    color:var(--contentcolor);
+    margin-left: 28%;
+}
