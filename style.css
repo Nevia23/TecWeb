@@ -8,6 +8,7 @@
 :root {
     --bgcolor: #0365AE;
     --breadcolor: #163F77;
+    --txtcolor: #FFF;
     --contentbgcolor: #FFF;
     --contentcolor: #000;
     --linkcolor: #FFF;
@@ -43,9 +44,32 @@ HEADER
 */
 
 header {
+    color: var(--txtcolor);
     text-align: center;
     padding: 1.0em;
     padding-top: 0.7em;
+    border: 1px solid var(--contentxtcolor);
+    background: url("images/giannellipalleggio.jpg") right bottom no-repeat,
+                url("images/michielettocoppa.jpg") left top no-repeat;
+    background-size: 20%, 20%;
+}
+
+header h1 {
+    background-image: url("images/logo_fipav.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-indent: -9999px;
+    font-size: 6em;
+    line-height: 1.5em;
+}
+
+#currentLink {
+    background-image: url("images/favpng_volleyball-icon.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 1.5em;/* margin non è coperto da sfondo*/
+    background-size: 1.2em;
 }
 
 header h2 {
@@ -62,6 +86,7 @@ BREADCRUMB
 
 #breadcrumb {
     background-color: var(--breadcolor);
+    color:var(--txtcolor);
     font-size: 1.1em;
     padding: 0.5em 0em 0.5em 1.0em; /*padding e non margin altrimenti prenderebbe colore di bg*/
     border: 1px solid #000;
@@ -96,8 +121,8 @@ MENU
     color: var(--visitedcolor);
 }
 
-ul {
-    list-style: none; /*no puntini di elenco*/
+#menu ul {
+    list-style-type: none; /*no puntini di elenco*/
 }
 
 /*
@@ -117,6 +142,16 @@ aside {
 aside h2 {
     background-color: var(--newscolor);
     color: var(--newstxtcolor);
+    padding: 0.2em;
+}
+
+aside dl dd {
+    margin-left: 1.5em;
+}
+
+aside dt {
+    margin-left: 0.8em;
+    font-weight: bold;
 }
 
 /*
@@ -132,4 +167,104 @@ main {
     margin-left: 28%;
     padding: 1.75em;
     border: 1px solid var(--contentxtcolor);
+}
+
+main h1 {
+    padding: 0.7em;
+    padding-top: 0.1em;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+main h2 {
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+}
+
+#giocatori>dt {
+    background-color: var(--breadcolor);
+    color: var(--txtcolor);
+    font-size: 1.1em;
+    padding: 0.5em;
+    border: 1px solid #000;
+}
+
+main>dl {
+    width: 95%;
+}
+   
+#giocatori>dt{
+    margin-top: 1em;
+}
+   
+#giocatori>dd{
+    border: 1px solid #000;
+    border-top: none;
+    padding: 0.5em;
+}
+   
+#giocatori>dd img{
+    width: 20%;
+    float: left;
+}
+   
+#premi dt{
+    background-image: url("images/favpng_volleyball-icon.png");
+    background-repeat: no-repeat;
+    background-position: left ;
+    padding-left: 1.3em;
+    background-size: 1.2em;
+}
+   
+#premi dd{
+    margin-left: 1.3em;
+}
+   
+#premi{
+    margin-left: 2em;
+}
+   
+#giocatori dd dl{
+    margin-left: 24%;
+}
+   
+.giocatore dt{
+    float:left;
+    font-weight: bold;
+    padding-right: 0.5em;
+}
+   
+.giocatore dt::after{
+    content: ": ";
+}
+   
+dt.Riconoscimenti{
+    float:none;
+}
+
+.list li{
+    margin-left: 2em;
+}
+
+#de_giorgi{
+    width:35%;
+    float:left; 
+    padding: 1em;
+    border-radius: 0% 30% 30% 0%;
+}
+   
+/*FOOTER*/
+   
+footer{
+    background-color: var(--breadcolor);
+    color: var(--txtcolor);
+    text-align: center;
+    padding: 1.0em;   
+    border: 1px solid var(--contentxtcolor);   
+}
+   
+footer p{
+    display: inline;
+    font-style: italic;
+    font-size: 0.8em;
 }
