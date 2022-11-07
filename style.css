@@ -64,14 +64,6 @@ header h1 {
     line-height: 1.5em;
 }
 
-#currentLink {
-    background-image: url("images/favpng_volleyball-icon.png");
-    background-repeat: no-repeat;
-    background-position: left center;
-    padding-left: 1.5em;/* margin non è coperto da sfondo*/
-    background-size: 1.2em;
-}
-
 header h2 {
     font-size: 1.8em;
     padding: 0.5em;
@@ -111,6 +103,7 @@ MENU
     width: 25%;
     font-size: 1.3em;
     padding: 0.8em;
+    line-height: 1.5em;
 }
 
 #menu a:link {
@@ -125,6 +118,14 @@ MENU
     list-style-type: none; /*no puntini di elenco*/
 }
 
+#currentLink {
+    background-image: url("images/favpng_volleyball-icon.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 1.5em;/* margin non è coperto da sfondo*/
+    background-size: 1.2em;
+}
+
 /*
 ================
 ULTIME NEWS
@@ -134,9 +135,10 @@ ULTIME NEWS
 aside {
     float: right;
     width: 20%;
-    padding: 0.5em;
+    padding: 0.8em;
     background-color: var(--bgcolor);
-    margin:1.2em;
+    border: 1px solid #000;
+    margin: 1.5em;
 }
 
 aside h2 {
@@ -145,7 +147,7 @@ aside h2 {
     padding: 0.2em;
 }
 
-aside dl dd {
+aside dd {
     margin-left: 1.5em;
 }
 
@@ -164,50 +166,40 @@ main {
     width: 66,5%;
     background-color: var(--contentbgcolor);
     color: var(--contentcolor);
-    margin-left: 28%;
-    padding: 1.75em;
+    margin-left: 25%;
+    padding: 2.5em;
     border: 1px solid var(--contentxtcolor);
+    border-top: none;
 }
 
 main h1 {
+    font-size: 2.3em;
     padding: 0.7em;
     padding-top: 0.1em;
-    text-align: center;
     line-height: 1.5em;
+    text-align: center;
 }
 
 main h2 {
+    font-size: 1.8em;
     padding-top: 0.7em;
     padding-bottom: 0.7em;
 }
 
-#giocatori>dt {
-    background-color: var(--breadcolor);
-    color: var(--txtcolor);
-    font-size: 1.1em;
-    padding: 0.5em;
-    border: 1px solid #000;
+main ul{
+    padding-left: 2em;
 }
 
-main>dl {
-    width: 95%;
+/*
+================
+HOME
+================
+*/
+
+#premi{
+    margin-left: 1em;
 }
-   
-#giocatori>dt{
-    margin-top: 1em;
-}
-   
-#giocatori>dd{
-    border: 1px solid #000;
-    border-top: none;
-    padding: 0.5em;
-}
-   
-#giocatori>dd img{
-    width: 20%;
-    float: left;
-}
-   
+
 #premi dt{
     background-image: url("images/favpng_volleyball-icon.png");
     background-repeat: no-repeat;
@@ -219,13 +211,44 @@ main>dl {
 #premi dd{
     margin-left: 1.3em;
 }
-   
-#premi{
-    margin-left: 2em;
+
+/*
+================
+LA SQUADRA
+================
+*/
+
+main > dl {
+    width: 95%;
+    margin: auto;
+}
+
+#giocatori {
+    margin-top: 1em;
+}
+
+#giocatori > dd img{
+    width: 20%;
+    float: left;
+}
+
+#giocatori > dt {
+    background-color: var(--breadcolor);
+    color: var(--txtcolor);
+    font-size: 1.1em;
+    padding: 0.5em;
+    border: 1px solid #000;
 }
    
-#giocatori dd dl{
-    margin-left: 24%;
+#giocatori > dd {
+    border: 1px solid #000;
+    border-top: none;
+    padding: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+#giocatori > dd dl{
+    margin-left: 25%;
 }
    
 .giocatore dt{
@@ -233,37 +256,44 @@ main>dl {
     font-weight: bold;
     padding-right: 0.5em;
 }
-   
+
+/*
 .giocatore dt::after{
     content: ": ";
 }
+*/
    
-dt.Riconoscimenti{
+dt.Riconoscimenti {
     float:none;
 }
 
-.list li{
+.list li {
     margin-left: 2em;
 }
 
-#de_giorgi{
+#de_giorgi {
     width:35%;
     float:left; 
     padding: 1em;
     border-radius: 0% 30% 30% 0%;
 }
+
+/*
+================
+FOOTER
+================
+*/
    
-/*FOOTER*/
-   
-footer{
+footer {
     background-color: var(--breadcolor);
     color: var(--txtcolor);
     text-align: center;
-    padding: 1.0em;   
-    border: 1px solid var(--contentxtcolor);   
+    padding: 1.5%;   
+    border: 1px solid var(--contentxtcolor);
+    vertical-align: middle;
 }
    
-footer p{
+footer p {
     display: inline;
     font-style: italic;
     font-size: 0.8em;
