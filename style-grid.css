@@ -1,0 +1,300 @@
+/*selettore universale*/
+* {
+    padding: 0em;
+    margin: 0em;
+}
+
+/* :root sono variabili*/
+:root {
+    --bgcolor: #0365AE;
+    --breadcolor: #163F77;
+    --txtcolor: #FFF;
+    --contentbgcolor: #FFF;
+    --contentcolor: #000;
+    --linkcolor: #FFF;
+    --visitedcolor: #F3C42B;
+    --newscolor: #F3C42B;
+    --newstxtcolor: #000;
+}
+
+html, body {
+    font-size: 100%; /* lascio scelta dell'utente */
+    font-family: "verdana", sans-serif;
+    line-height: 1.5em; /*specifica spaziatura tra le righe di testo*/
+    margin: auto; /*spazio di separazione dei riquadri. auto imposta un margine sia sopra che sotto.*/
+    background-color: var(--bgcolor);
+    color: var(--contentbgcolor); /*colore testo*/
+}
+
+html {
+    background-image: url("images/bg.webp"); /*immagine di background deve essere sotto 1MB */
+    background-size: contain; /* adatto allo schermo */
+}
+
+body {
+    max-width: 1024px; /*larghezza massima riquadro*/
+    border: 1px solid #000;
+    background-color: var(--bgcolor);
+}
+
+/*
+================
+HEADER
+================
+*/
+
+header {
+    color: var(--txtcolor);
+    text-align: center;
+    padding: 1.0em;
+    padding-top: 0.7em;
+    border: 1px solid var(--contentxtcolor);
+    background: url("images/giannellipalleggio.jpg") right bottom no-repeat,
+                url("images/michielettocoppa.jpg") left top no-repeat;
+    background-size: 20%, 20%;  /*dimensione di una o più immagini di sfondo*/
+}
+
+header h1 {
+    background-image: url("images/logo_fipav.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-indent: -9999px;
+    font-size: 6em;
+    line-height: 1.5em;
+}
+
+header h2 {
+    font-size: 1.8em;
+    padding: 0.5em;
+    margin-top: 0.3em;
+}
+
+/*
+================
+BREADCRUMB
+================
+*/
+
+#breadcrumb {
+    background-color: var(--breadcolor);
+    color:var(--txtcolor);
+    font-size: 1.1em;
+    padding: 0.5em 0em 0.5em 1.0em; /*padding e non margin altrimenti prenderebbe colore di bg*/
+    border: 1px solid #000;
+}
+
+#breadcrumb a:link {
+    color: var(--linkcolor);
+}
+
+#breadcrumb a:visited {
+    color: var(--visitedcolor);
+}
+
+/*
+================
+MENU
+================
+*/
+
+#menu {
+    float: left;
+    width: 25%;
+    font-size: 1.3em;
+    padding: 0.8em;
+    line-height: 1.5em;
+}
+
+#menu a:link {
+    color: var(--linkcolor);
+}
+
+#menu a:visited {
+    color: var(--visitedcolor);
+}
+
+#menu ul {
+    list-style-type: none; /*no puntini di elenco*/
+}
+
+#currentLink {
+    background-image: url("images/favpng_volleyball-icon.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 1.5em; /* margin non è coperto da sfondo*/
+    background-size: 1.2em;
+}
+
+/*
+================
+ULTIME NEWS
+================
+*/
+
+aside {
+    float: right;
+    width: 20%;
+    padding: 0.8em;
+    background-color: var(--bgcolor);
+    border: 1px solid #000;
+    margin: 1.5em;
+}
+
+aside h2 {
+    background-color: var(--newscolor);
+    color: var(--newstxtcolor);
+    padding: 0.2em;
+}
+
+aside dd {
+    margin-left: 1.5em;
+}
+
+aside dt {
+    margin-left: 0.8em;
+    font-weight: bold;
+}
+
+/*
+================
+CONTENUTO
+================
+*/
+
+main {
+    width: 66,5%;
+    background-color: var(--contentbgcolor);
+    color: var(--contentcolor);
+    margin-left: 25%;
+    padding: 2.5em;
+    border: 1px solid var(--contentxtcolor);
+    border-top: none;
+}
+
+main h1 {
+    font-size: 2.3em;
+    padding: 0.7em;
+    padding-top: 0.1em;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 1.8em;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+}
+
+main ul{
+    padding-left: 2em;
+}
+
+/*
+================
+HOME
+================
+*/
+
+#premi{
+    margin-left: 1em;
+}
+
+#premi dt{
+    background-image: url("images/favpng_volleyball-icon.png");
+    background-repeat: no-repeat;
+    background-position: left ;
+    padding-left: 1.3em;
+    background-size: 1.2em;
+}
+   
+#premi dd{
+    margin-left: 1.3em;
+}
+
+/*
+================
+LA SQUADRA
+================
+*/
+
+main > dl {
+    width: 95%;
+    margin: auto;
+}
+
+#giocatori {
+    margin-top: 1em;
+}
+
+#giocatori > dd img{
+    width: 20%;
+    float: left;
+}
+
+#giocatori > dt {
+    background-color: var(--breadcolor);
+    color: var(--txtcolor);
+    font-size: 1.1em;
+    padding: 0.5em;
+    border: 1px solid #000;
+}
+   
+#giocatori > dd {
+    border: 1px solid #000;
+    border-top: none;
+    padding: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+#giocatori > dd dl{
+    margin-left: 25%;
+}
+   
+.giocatore dt{
+    float:left;
+    font-weight: bold;
+    padding-right: 0.5em;
+}
+
+/*
+.giocatore dt::after{
+    content: ": ";
+}
+*/
+   
+dt.Riconoscimenti {
+    float:none;
+}
+
+.list li {
+    margin-left: 2em;
+}
+
+#de_giorgi {
+    width:35%;
+    float:left; 
+    padding: 1em;
+    border-radius: 0% 30% 30% 0%;
+}
+
+/*
+================
+FOOTER
+================
+*/
+   
+footer {
+    background-color: var(--breadcolor);
+    color: var(--txtcolor);
+    text-align: center;
+    padding: 1.5%;   
+    border: 1px solid var(--contentxtcolor);
+    vertical-align: middle;
+}
+   
+footer p {
+    display: inline;
+    font-style: italic;
+    font-size: 0.8em;
+}
