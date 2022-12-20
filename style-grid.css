@@ -20,19 +20,19 @@
 html, body {
     font-size: 100%; /* lascio scelta dell'utente */
     font-family: "verdana", sans-serif;
-    line-height: 1.5em;
-    margin: auto;
+    line-height: 1.5em; /*specifica spaziatura tra le righe di testo*/
+    margin: auto; /*spazio di separazione dei riquadri. auto imposta un margine sia sopra che sotto.*/
     background-color: var(--bgcolor);
-    color: var(--contentbgcolor);
+    color: var(--contentbgcolor); /*colore testo*/
 }
 
 html {
-    background-image: url("images/bg.png"); /*immagine di background deve essere sotto 1MB */
+    background-image: url("images/bg.webp"); /*immagine di background deve essere sotto 1MB */
     background-size: contain; /* adatto allo schermo */
 }
 
 body {
-    max-width: 1024px;
+    max-width: 1024px; /*larghezza massima riquadro*/
     border: 1px solid #000;
     background-color: var(--bgcolor);
 }
@@ -51,7 +51,7 @@ header {
     border: 1px solid var(--contentxtcolor);
     background: url("images/giannellipalleggio.jpg") right bottom no-repeat,
                 url("images/michielettocoppa.jpg") left top no-repeat;
-    background-size: 20%, 20%;
+    background-size: 20%, 20%;  /*dimensione di una o più immagini di sfondo*/
 }
 
 header h1 {
@@ -122,7 +122,7 @@ MENU
     background-image: url("images/favpng_volleyball-icon.png");
     background-repeat: no-repeat;
     background-position: left center;
-    padding-left: 1.5em;/* margin non è coperto da sfondo*/
+    padding-left: 1.5em; /* margin non è coperto da sfondo*/
     background-size: 1.2em;
 }
 
