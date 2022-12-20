@@ -1,0 +1,100 @@
+<!--Grazie Marco! Da rifare autonomamente-->
+
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8" />
+        <title>
+           Form - Volley Tribute
+        </title>
+        <meta name="description" content="Questa pagina è dedicata all'inserimento di nuovi giocatori nella pagina della nazionale italiana di pallavolo maschile"/>
+        <meta name="keyword" content="Simone Giannelli, Gianluca Galassi, Fabio Balaso, Lavia,Michieletto, giocatori pallavolo,maschile,italia,nazionale italiana"/>
+        <meta name="author" content="Marco Brugin"/>
+        <link rel="stylesheet" href="style-grid.css" media="handheld,screen"/>
+        <link rel="shorcut icon" type="images/png" href="images/favicon.ico"/>
+        <link rel="stylesheet" href="print.css" media="print"/> <!--riparto da capo -->
+        <link rel="stylesheet" href="mini.css" media="handheld, only screen and (max-device-width:600px)"/><!-- eventualmenet sovrascrivo delle regoel è un checkpoint only --> 
+    </head>
+    <body>
+    <nav id="breadcrumb">
+        <p>
+            Ti trovi in: <span lang="en"> <a href="index.html">Home</a></span> &gt; &gt; Form
+        </p>
+    </nav>
+    <a class="aiuti" href="#contenuto">Salta al contenuto</a>
+    <nav id="menu">
+        <ul>
+            <li  lang="en"> <!--Non metto link per non creare perdita di cognizione nell'utente finale-->
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="allenatore.html">L'allenatore</a>
+            </li>
+            <li>
+                <a href="squadra.html">La squadra</a>
+            </li>
+            <li id="currentLink">Form</li>
+            <li>
+                <a href="fairplay.html">Il <span lang="en">fair play</span></a>
+            </li>
+        </ul>
+    </nav>
+    <main id="contenuto">
+        <h1>Form di inserimento</h1>
+        <form action="" method="POST">
+            <fieldset>
+                <legend>Dati Personali</legend>
+                    <label for="Nome">Nome:</label>
+                    <input name="nome" id="Nome"  maxlength="12" placeholder="Nome" required="required"/>
+                    <label for="Cognome">Cognome:</label>
+                    <input name="cognome" id="Cognome"  maxlength="12" placeholder="Cognome" required="required"/>
+                    <label for="Nascita">Data di nascita:</label>
+                    <input  type="date" name="nascita" id="Nascita" min="1900-01-01" max="2023-01-01" required="required"/>
+                    <label for="Luogo">Luogo di nascita:</label>
+                    <input name="luogo" id="Luogo"  maxlength="20" placeholder="Luogo" required="required"/>
+                    <label for="Altezza">Altezza:</label>
+                    <input type="number" name="altezza" id="Altezza" min="150" max="215" required="required" placeholder="150"/>
+            </fieldset>
+            <fieldset>
+                <legend>Dati Professionali</legend>
+                <label for="Squadra">Squadra:</label>
+                <input name="squadra" id="Squadra"  maxlength="30" placeholder="Squadra" required="required"/>
+                <label for="Ruolo">Ruolo:</label>
+                <input  list="ruoli" name="Ruolo" id="Ruolo" placeholder="Palleggiatore" required="required"/>
+                    <datalist id="ruoli">
+                        <option value="Palleggiatore">Palleggiatore</option>
+                        <option value="Libero">Libero</option>
+                        <option value="Schiacciatore">Schiacciatore</option>
+                        <option value="Alzatore"> Schiacciatore</option>
+                    </datalist>
+                <label for="Numero">Numero di maglia:</label>
+                <input type="number" name="numero" id="Numero" min="0" max="100" required="required" placeholder="0"/>
+                <label for="Punti">Punti Totali:</label>
+                <input type="number" name="punti" id="Punti" min="0" max="1000" required="required" placeholder="0"/>
+            </fieldset>
+            <fieldset>
+                <legend>Dati della Nazionale Italiana</legend>
+                    <label for="Nazionale">Numero di maglia in nazionale:</label>
+                    <input type="number" name="nazionale" id="Nazionale" min="0" max="100" required="required" placeholder="0"/>
+                    <label for="capitano_si">Capitano:</label>
+                    <input type="radio" name="capitano" id="capitano_si" value="SI" required="required"/><label for="capitano_si">SI</label>
+                    <input type="radio" name="capitano" id="capitano_no" value="NO" required="required"/><label for="capitano_no" >NO</label>
+            </fieldset>
+            <fieldset>
+                <legend>OPTIONAL</legend>
+                    <label for="Riconoscimenti">Riconoscimenti:</label>
+                    <textarea id="Riconoscimenti" name="riconoscimenti" rows="4" cols="60" placeholder="Inserisci i riconoscimenti:"></textarea>
+                    <label for="Note">Note:</label>
+                    <textarea id="Note" name="note" rows="2" cols="30" placeholder="Inserisci le note:"></textarea>  
+            </fieldset>
+            <input type="submit" name="INVIA"/>
+            <input type="reset" name="RESET"/>
+        </form>
+    </main>
+    <footer>
+        <img src="images/valid-xhtml10.png" alt="W3C html valido" />
+        <p><em>Marco Brugin &amp; Federazione Italiana Pallavolo - <span lang="en">All rights Reserved</span></em></p>
+        <img src="images/vcss-blue.gif" alt="W3C css valido">
+    </footer>
+</body>
+</html>
