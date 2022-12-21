@@ -5,7 +5,7 @@ namespace DB;
 class DBAccess {
 
 	private const HOST_DB = "127.0.0.1";
-	private const DATABASE_NAME = "bzaghett
+	private const DATABASE_NAME = "bzaghett"
 	private const USERNAME =
 	private const PASSWORD =
 
@@ -37,6 +37,31 @@ class DBAccess {
 			}
 			$queryResult->free();
 			return $result;
+		}
+	}
+
+	public function insertNewPlayer($nome, $capitano, $dataNascita, $luogo, $squadra, $ruolo, $altezza, $maglia, $magliaNazionale, $punti, $riconoscimenti, $note) {
+		//non metto ID tra gli attributi perché definito autoincrementante
+		$queryString = "INSERT INTO giocatori (nome, capitano, dataNascita, luogo, squadra, ruolo, altezza, maglia, magliaNazionale, punti, riconoscimenti, note) VALUES (\"$nome\", $capitano, \"$dataNascita\", \"$luogo\", \"$squadra\", \"$ruolo\", $altezza, $maglia, $magliaNazionale, $punti, \"$riconoscimenti\", \"$note\")";
+		
+		$queryOK = mysqli_query($this->connection, $queryString) or die(mysqli_error(this->connection));
+
+		if (msqli_affected_rows($this->connection)>0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public function deletePlayer($id) {
+		$queryString = "DELETE FROM giocatori WHERE ID=$id";
+
+		$queryOK = mysqli_query($this->connection, $queryString) or die(mysqli_error(this->connection));
+
+		if (msqli_affected_rows($this->connection)>0) {
+			return true;
+		} else {
+			return false;
 		}
 	}
 
