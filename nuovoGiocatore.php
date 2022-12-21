@@ -113,4 +113,6 @@ $paginaHTML = str_replace('valoreLuogo />', $luogo, $paginaHTML);
 //ecc ecc
 echo $paginaHTML;
 
+//dopo login cosa si vedrà? la dashboard dell'utente. Meglio NON rimandare alla home.
+
 ?>
